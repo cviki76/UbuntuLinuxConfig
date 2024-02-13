@@ -1,0 +1,2 @@
+require("cviki")
+print("Hello")
