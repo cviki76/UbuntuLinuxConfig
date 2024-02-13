@@ -1,0 +1,2 @@
+# NeoVimConf
+Neovim configuration 
