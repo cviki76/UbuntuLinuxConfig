@@ -1,7 +1,14 @@
-local config = require("nvim-treesitter.configs")
+require("lazy").setup({{
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function () 
+      local configs = require("nvim-treesitter.configs")
 
-config.setup({
-    ensure_installed = {"lua", "javascript", "c"}
-    highlight =  { enable = true },
-    ident = { enable = true }
-})
+      configs.setup({
+          ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },  
+        })
+    end
+ }})
