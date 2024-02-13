@@ -1,2 +1,1 @@
 require("cviki")
-print("Hello")
