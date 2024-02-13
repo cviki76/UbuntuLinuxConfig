@@ -1,7 +1,0 @@
-require("cviki.remap")
-require("cviki.lazy")
-require("cviki.telescope")
-require("cviki.colorscheme")
-require("cviki.treesitter")
-require("cviki.undotree")
-require("cviki.neotree")
