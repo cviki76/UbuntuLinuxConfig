@@ -1,8 +1,6 @@
+-- Vim mappings
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
-
-vim.keymap.set({'n','v'}, '<C-n>', ':NvimTreeToggle<CR>')
-vim.keymap.set({'n','v'}, '<leader>n', ':NvimTreeFocus<CR>')
 
 vim.keymap.set({'n','v'}, 'i', 'k')
 vim.keymap.set({'n','v'}, 'j', 'h')
@@ -59,5 +57,28 @@ vim.keymap.set('n', '<CR>', 'a<CR><ESC>')
 vim.keymap.set('n', '!', 'magg=G`a')
 vim.keymap.set('n', '@', '=')
 
-vim.keymap.set('n', 'h', 'I//<ESC>')
-vim.keymap.set('n', 'H', 'I<Del><Del><ESC>')
+--Directory Navigation
+
+vim.keymap.set({'n','v'}, '<C-n>', ':NvimTreeToggle<CR>')
+vim.keymap.set({'n','v'}, '<leader>n', ':NvimTreeFocus<CR>')
+
+--Pane Navigation
+
+vim.keymap.set('n', '<A-j>', '<C-w>h') -- Navigate Left
+vim.keymap.set('n', '<A-k>', '<C-w>j') -- Navigate Down
+vim.keymap.set('n', '<A-i>', '<C-w>k') -- Navigate Up
+vim.keymap.set('n', '<A-l>', '<C-w>l') -- Navigate Right
+
+--Window Management
+
+vim.keymap.set('n', '<leader>sv', ':vsplit<CR>') -- Split Vertically
+vim.keymap.set('n', '<leader>sh', ':split<CR>') -- Split Horizontally
+vim.keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>') -- Split Vertically
+
+--Comments
+vim.api.nvim_set_keymap('n', "h", "gcc", {noremap = false})
+vim.api.nvim_set_keymap('v', "h", "gcc", {noremap = false})
+
+--Indenting
+vim.keymap.set('v', "<", "<gv")
+vim.keymap.set('v', ">", ">gv")
