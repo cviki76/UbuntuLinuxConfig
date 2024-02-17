@@ -76,8 +76,8 @@ vim.keymap.set('n', '<leader>sh', ':split<CR>') -- Split Horizontally
 vim.keymap.set('n', '<leader>sm', ':MaximizerToggle<CR>') -- Split Vertically
 
 --Comments
-vim.api.nvim_set_keymap('n', "h", "gcc", {noremap = false})
-vim.api.nvim_set_keymap('v', "h", "gcc", {noremap = false})
+vim.api.nvim_set_keymap('n', "<C-_>", "gcc<ESC>", {noremap = false})
+vim.api.nvim_set_keymap('v', "<C-_>", "gcc<ESC>", {noremap = false})
 
 --Indenting
 vim.keymap.set('v', "<", "<gv")
