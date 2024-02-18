@@ -4,7 +4,7 @@ return{
      install = {colorscheme = "nightfox"},
      config = {
         filters = {
-          dotfiles = true
+          dotfiles = false
         } 
      }
   }
