@@ -38,7 +38,8 @@ vim.keymap.set({'n','v'}, 'U', 'p')
 
 vim.keymap.set({'n','v'}, 'q', '^')
 vim.keymap.set({'n','v'}, 'Q', 'gg^')
-vim.keymap.set({'n','v'}, 'p', '$')
+vim.keymap.set('n', 'p', '$')
+vim.keymap.set('v', 'p', '$h')
 vim.keymap.set({'n','v'}, 'P', 'G$')
 
 vim.keymap.set('i', 'jk', '<ESC>')
