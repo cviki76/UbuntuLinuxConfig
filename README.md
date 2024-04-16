@@ -1,6 +1,27 @@
-# NeoVimConf
-**Ubuntu Installation**
-https://www.youtube.com/watch?v=HtST0LMRy0M
+# Linux Configuration
+
+# Linux - Ubuntu - VirtualBox Setup (https://www.youtube.com/watch?v=HtST0LMRy0M)
+*  Virtualization - **ON**
+*  Download the `.iso` file (ex. ubuntu-22.04.3-desktop-amd64.iso)
+*  Create Virtual Machine Prompt
+   * Version - Ubuntu (64-bit)
+   * Allocate disk space
+* Display
+  * Video memory - max
+  * Enable 3D Acceleration
+* Storage
+  * Click on Empty -> Click on DVD icon -> Chose a disk file -> Add `.iso` file
+* Run the virtual machine and install ubuntu
+* Erase disk and install Ubuntu
+* Do not check `active directory`
+* When booted
+  * Click `Devices` in the menu, and click `Insert Guest Addittions CD Image...`
+  * Copy **everything** from the `VBox mount`, to the `Documents` directory
+  * Open the terminal, while in the `Documents` directory
+  * Run `sudo apt update`
+  * `sudo apt install linux-headers-$(uname -r)`
+  * `chmod +x VBoxLinuxAdditions.run`
+  * `sudo ./VBoxLinuxAdditions.run`
 
 Neovim configuration 
 
