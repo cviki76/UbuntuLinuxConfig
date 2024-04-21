@@ -1,6 +1,6 @@
-# Linux Configuration
+# Ubuntu Linux - ZSH(OhMyZsh) - NeoVim - Tmux Configuration
 
-# Linux - Ubuntu - VirtualBox Setup (https://www.youtube.com/watch?v=HtST0LMRy0M)
+# Linux - Ubuntu - VirtualBox Setup
 *  Virtualization - **ON**
 *  Download the `.iso` file (ex. ubuntu-22.04.3-desktop-amd64.iso)
 *  Create Virtual Machine Prompt
@@ -23,18 +23,41 @@
   * `chmod +x VBoxLinuxAdditions.run`
   * `sudo ./VBoxLinuxAdditions.run`
 
-Neovim configuration 
+# Global install
+`sudo apt install git wget curl xclip gcc ripgrep tmux pandoc npm`
+# ZSH (OhMyZsh)
 
-NeoVim Install:
-<br/>
-`sudo add-apt-repository ppa:neovim-ppa/unstable`
-<br/>
-`sudo apt-get update`
-<br/>
-`sudo apt-get install neovim`
-<br/>
+Installing zsh
+* `sudo apt install zsh`
 
-lazy.nvim requires Neovim >= 0.8.0
+Changing zsh to be main terminal (restart needed)
+* `chsh -s $(which zsh)`
+
+Installing Oh-My-Zsh
+* `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+Installing Oh-My-Zsh plugins
+* `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+* `git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+
+Installing Catpuccin theme for GNOME-terminal
+* `curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -`
+
+Downloading the Nerd Font(Hack Nerd Font)
+* `wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf -P ~/.local/share/fonts'`
+
+Downloading the terminal theme
+* `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+* Answer the questions from the prompt
+
+**After that, select the GNOME terminal theme and the nerd font in the terminal `Preferences`**
+
+# NEOVIM configuration 
+
+NeoVim Installation (lazy.nvim requires Neovim >= 0.8.0)
+* `sudo add-apt-repository ppa:neovim-ppa/unstable` 
+* `sudo apt-get update`
+* `sudo apt-get install neovim`
 
 Needed for livegrep with telescope:
 <br/>
