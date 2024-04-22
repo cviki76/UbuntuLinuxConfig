@@ -24,54 +24,49 @@
   * `sudo ./VBoxLinuxAdditions.run`
 
 # Global install
-`sudo apt install git wget curl xclip gcc ripgrep tmux pandoc npm`
+`sudo apt install git wget curl xclip gcc ripgrep pandoc`
 # ZSH (OhMyZsh)
 
-Installing zsh
-* `sudo apt install zsh`
+* Installing zsh
+    * `sudo apt install zsh`
 
-Changing zsh to be main terminal (restart needed)
-* `chsh -s $(which zsh)`
+* Changing zsh to be main terminal (restart needed)
+    * `chsh -s $(which zsh)`
 
-Installing Oh-My-Zsh
-* `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+* Installing Oh-My-Zsh
+    * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-Installing Oh-My-Zsh plugins
-* `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
-* `git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+* Installing Oh-My-Zsh plugins
+    * `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+    * `git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 
-Installing Catpuccin theme for GNOME-terminal
-* `curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -`
+* Installing Catpuccin theme for GNOME-terminal
+    * `curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -`
 
-Downloading the Nerd Font(Hack Nerd Font)
-* `wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf -P ~/.local/share/fonts'`
+* Downloading the Nerd Font(Hack Nerd Font)
+    * `wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf -P ~/.local/share/fonts'`
 
-Downloading the terminal theme
-* `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
-* Answer the questions from the prompt
+* Downloading the terminal theme
+    * `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
+    * Answer the questions from the prompt
 
 **After that, select the GNOME terminal theme and the nerd font in the terminal `Preferences`**
 
-# NEOVIM configuration 
+# NEOVIM
 
-NeoVim Installation (lazy.nvim requires Neovim >= 0.8.0)
-* `sudo add-apt-repository ppa:neovim-ppa/unstable` 
-* `sudo apt-get update`
-* `sudo apt-get install neovim`
+* NeoVim Installation (lazy.nvim requires Neovim >= 0.8.0)
+    * `sudo add-apt-repository ppa:neovim-ppa/unstable` 
+    * `sudo apt-get update`
+    * `sudo apt-get install neovim`
 
-Needed for livegrep with telescope:
-<br/>
-`sudo apt install ripgrep`
+* Clone the nvim config
+    * `git clone https://github.com/cviki76/UbuntuLinuxConfig`
+* Download `live-server` and `pyright` (for lsp)
+    * `sudo apt install npm`
+    * `npm install -g live-server`
+    * `npm install -g pyright`
 
-**Clone the nvim config**
-<br/>
-**Download a nerd font**
-<br/>
-**Install xclip for clipboard sharing**
-<br/>
-<br/>
-
-*TMUX*
+# TMUX
 <br/>
 **Install Tmux**
 <br/>
