@@ -67,16 +67,17 @@
     * `sudo npm install -g pyright`
 
 # CLONING THE CONFIG
-*  `mkdir temp`
-*  `cd temp`
-*  `git clone https://github.com/cviki76/UbuntuLinuxConfig`
-*  `rm -rf .git`
-*  `rm -rf README.md`
-*  `mv UbuntuLinuxConfig/* ~/.config`
-*  `mv UbuntuLinuxConfig/.* ~`
-*  `cd ..`
-*  `rm -rf temp`
-
+  ```bash
+  mkdir temp
+  cd temp
+  git clone https://github.com/cviki76/UbuntuLinuxConfig
+  rm -rf .git
+  rm -rf README.md
+  mv UbuntuLinuxConfig/* ~/.config
+  mv UbuntuLinuxConfig/.* ~
+  cd ..
+  rm -rf temp
+  ```
 # TMUX
 
 * Tmux Installation
