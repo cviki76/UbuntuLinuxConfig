@@ -55,8 +55,6 @@
 * Downloading the terminal theme
     * `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
 
-**After that, select the GNOME terminal theme(Catppuccin Mocha) and the nerd font in the terminal `Preferences`**
-
 # NEOVIM
 
 * NeoVim Installation (lazy.nvim requires Neovim >= 0.8.0)
@@ -75,7 +73,7 @@
 *  `rm -rf .git`
 *  `rm -rf README.md`
 *  `mv UbuntuLinuxConfig/* ~/.config`
-*  `mv UbuntuLinuxConfig/.* ~/.config`
+*  `mv UbuntuLinuxConfig/.* ~`
 *  `cd ..`
 *  `rm -rf temp`
 
