@@ -1,6 +1,6 @@
 # Ubuntu Linux - ZSH(OhMyZsh) - NeoVim - Tmux Configuration
 
-# Linux - Ubuntu - VirtualBox Setup
+# Linux - Ubuntu - VirtualBox Setup (Optional)
 *  Virtualization - **ON**
 *  Download the `.iso` file (ex. ubuntu-22.04.3-desktop-amd64.iso)
 *  Create Virtual Machine Prompt
@@ -24,9 +24,15 @@
   * `sudo ./VBoxLinuxAdditions.run`
 
 # Global install
-`sudo apt install git wget curl xclip gcc ripgrep pandoc`
-# ZSH (OhMyZsh)
+* `sudo apt upgrade`
+* `sudo apt update`
+* `sudo apt install git wget curl xclip gcc ripgrep pandoc npm`
 
+# Git Config
+* `git config --global user.name "username"`
+* `git config --global user.email "email"`
+
+# ZSH (OhMyZsh)
 * Installing zsh
     * `sudo apt install zsh`
 
@@ -44,13 +50,12 @@
     * `curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -`
 
 * Downloading the Nerd Font(Hack Nerd Font)
-    * `wget https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf -P ~/.local/share/fonts'`
+    * `wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf -P ~/.local/share/fonts`
 
 * Downloading the terminal theme
     * `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`
-    * Answer the questions from the prompt
 
-**After that, select the GNOME terminal theme and the nerd font in the terminal `Preferences`**
+**After that, select the GNOME terminal theme(Catppuccin Mocha) and the nerd font in the terminal `Preferences`**
 
 # NEOVIM
 
@@ -59,12 +64,20 @@
     * `sudo apt-get update`
     * `sudo apt-get install neovim`
 
-* Clone the nvim config
-    * `git clone https://github.com/cviki76/UbuntuLinuxConfig`
 * Download `live-server` and `pyright` (for lsp)
-    * `sudo apt install npm`
-    * `npm install -g live-server`
-    * `npm install -g pyright`
+    * `sudo npm install -g live-server`
+    * `sudo npm install -g pyright`
+
+# CLONING THE CONFIG
+*  `mkdir temp`
+*  `cd temp`
+*  `git clone https://github.com/cviki76/UbuntuLinuxConfig`
+*  `rm -rf .git`
+*  `rm -rf README.md`
+*  `mv UbuntuLinuxConfig/* ~/.config`
+*  `mv UbuntuLinuxConfig/.* ~/.config`
+*  `cd ..`
+*  `rm -rf temp`
 
 # TMUX
 
@@ -72,7 +85,10 @@
    * `sudo apt-get install tmux`
 * Tmux Plugin Installation
    * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-* For every plugin in ~/.config/tmux/tmux.conf (`set -g @plugin *`) - (**restart maybe needed!**)
+* Reboot the PC
+* Select the GNOME terminal theme(Catppuccin Mocha) and the nerd font in the terminal `Preferences`**
+* Make a tmux session
+* For every plugin in ~/.config/tmux/tmux.conf (`set -g @plugin *`)
    * `Ctrl + Space`(leader key for tmux configured in the tmux.conf file) + I --> for install
    * The plugins should be appearing in the `~/.config/tmux/plugins` directory
 * In `.config/tmux/plugins/vim-tmux-navigator` change the bind keys to be like this
