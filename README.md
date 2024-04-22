@@ -67,42 +67,18 @@
     * `npm install -g pyright`
 
 # TMUX
-<br/>
-**Install Tmux**
-<br/>
-`sudo apt-get install tmux`
-<br/>
-**Install Tmux plugins**
-<br/>
-`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-<br/>
-**Mandatory plugin - Tmux-vim-navigator**
-<br/>
-`set -g @plugin 'christoomey/vim-tmux-navigator'`
-<br/>
-In `.config/tmux/plugins/vim-tmux-navigator`
-<br/>
-Change the bind keys to be like this
 
-`tmux bind-key -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -L"`
-<br/>
-`tmux bind-key -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -D"`
-<br/>
-`tmux bind-key -n C-i if-shell "$is_vim" "send-keys C-i" "select-pane -U"`
-<br/>
-`tmux bind-key -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"`
-<br/>
-
-required tools:
-neovim > 0.9
-git
-alacritty
-ripgrep
-node & npm
-typescript
-golang-go
-python3_venv
-luarocks
-pyright
-tmux
-
+* Tmux Installation
+   * `sudo apt-get install tmux`
+* Tmux Plugin Installation
+   * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+* For every plugin in ~/.config/tmux/tmux.conf (`set -g @plugin *`) - (**restart maybe needed!**)
+   * `Ctrl + Space`(leader key for tmux configured in the tmux.conf file) + I --> for install
+   * The plugins should be appearing in the `~/.config/tmux/plugins` directory
+* In `.config/tmux/plugins/vim-tmux-navigator` change the bind keys to be like this
+    * ```bash
+        tmux bind-key -n C-j if-shell "$is_vim" "send-keys C-j" "select-pane -L"
+        tmux bind-key -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -D"
+        tmux bind-key -n C-i if-shell "$is_vim" "send-keys C-i" "select-pane -U"
+        tmux bind-key -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
+        ```
