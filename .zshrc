@@ -109,3 +109,22 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+bindkey -v
+export KEYTIMEOUT=10
+
+bindkey -M viins jk vi-cmd-mode
+
+
+bindkey -M vicmd j vi-backward-char
+bindkey -M vicmd l vi-forward-char
+bindkey -M vicmd k down-line-or-history
+bindkey -M vicmd i up-line-or-history
+
+bindkey -M vicmd J vi-backward-word
+bindkey -M vicmd L vi-forward-word-end
+
+bindkey -M vicmd a vi-insert
+bindkey -M vicmd s vi-add-next
+bindkey -M vicmd A vi-beginning-of-line
+bindkey -M vicmd S vi-beginning-of-line
