@@ -113,13 +113,20 @@ source $ZSH/oh-my-zsh.sh
 bindkey -v
 export KEYTIMEOUT=10
 
+# autoload edit-command-line; zle -N edit-command-line
+# bindkey ''
+
 bindkey -M viins jk vi-cmd-mode
 
-
-bindkey -M vicmd j vi-backward-char
 bindkey -M vicmd l vi-forward-char
-bindkey -M vicmd k down-line-or-history
 bindkey -M vicmd i up-line-or-history
+bindkey -M vicmd k down-line-or-history
+bindkey -M vicmd j vi-backward-char
+
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'i' up-line-or-history
+bindkey -M menuselect 'k' down-line-or-history
+bindkey -M menuselect 'j' vi-backward-char
 
 bindkey -M vicmd J vi-backward-word
 bindkey -M vicmd L vi-forward-word-end
@@ -127,4 +134,30 @@ bindkey -M vicmd L vi-forward-word-end
 bindkey -M vicmd a vi-insert
 bindkey -M vicmd s vi-add-next
 bindkey -M vicmd A vi-beginning-of-line
-bindkey -M vicmd S vi-beginning-of-line
+bindkey -M vicmd S vi-end-of-line
+
+
+function zle-keymap-select {
+    if  [[ ${KEYMAP} == vicmd ]] ||
+        [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+    elif [[ ${KEYMAP} == main ]] ||
+        [[ ${KEYMAP} == viins ]] ||
+        [[ ${KEYMAP} == '' ]] ||
+        [[ $1 = 'beam' ]]; then
+        echo -ne '\e[5 q'
+    fi
+}
+zle -N zle-keymap-select
+
+zle-line-init(){
+    zle -K viins
+    echo -ne '\e[5 q'
+}
+
+zle -N zle-line-init
+
+echo -ne '\e[5 q'
+
+preexec() { echo -ne '\e[5 q' ;}
+
