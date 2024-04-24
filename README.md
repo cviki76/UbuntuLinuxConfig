@@ -26,7 +26,7 @@
 # Global install
 * `sudo apt upgrade`
 * `sudo apt update`
-* `sudo apt install git wget curl xclip gcc ripgrep pandoc npm`
+* `sudo apt install git wget curl xclip gcc ripgrep pandoc npm python3-pip`
 
 # Git Config
 * `git config --global user.name "username"`
