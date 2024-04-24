@@ -37,14 +37,14 @@ nnoremap U p
 vnoremap u "+p
 vnoremap U p
 
-nnoremap q ^
-nnoremap Q gg
-nnoremap P G
+noremap q ^
+noremap Q gg
+noremap P G
 
 vnoremap q ^
 vnoremap Q gg
-nmap p $
-vmap p $h
+nnoremap p $
+vnoremap p $h
 vnoremap P G$
 
 inoremap jk <ESC>
