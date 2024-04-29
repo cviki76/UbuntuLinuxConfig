@@ -23,6 +23,7 @@ opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect"
+vim.o.guicursor = "a:block"
 
 -- Behaviour
 opt.hidden = true
