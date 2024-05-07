@@ -132,10 +132,24 @@ bindkey -M vicmd J vi-backward-word
 bindkey -M vicmd L vi-forward-word-end
 
 bindkey -M vicmd a vi-insert
+bindkey -M vicmd A vi-insert-bol
 bindkey -M vicmd s vi-add-next
-bindkey -M vicmd A vi-beginning-of-line
-bindkey -M vicmd S vi-end-of-line
+bindkey -M vicmd S vi-add-eol
 
+bindkey -M vicmd q vi-beginning-of-line
+bindkey -M visual q vi-beginning-of-line
+bindkey -M vicmd p vi-end-of-line
+bindkey -M visual p vi-end-of-line
+
+bindkey -M vicmd w vi-find-next-char
+bindkey -M visual w vi-find-next-char
+bindkey -M vicmd z vi-find-next-char-skip
+bindkey -M visual z vi-find-next-char-skip
+
+bindkey -M vicmd W vi-find-prev-char
+bindkey -M visual W vi-find-prev-char
+bindkey -M vicmd Z vi-find-prev-char-skip
+bindkey -M visual Z vi-find-prev-char-skip
 
 # function zle-keymap-select {
 #     if  [[ ${KEYMAP} == vicmd ]] ||
