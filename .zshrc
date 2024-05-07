@@ -122,6 +122,10 @@ bindkey -M vicmd l vi-forward-char
 bindkey -M vicmd i up-line-or-history
 bindkey -M vicmd k down-line-or-history
 bindkey -M vicmd j vi-backward-char
+bindkey -M visual l vi-forward-char
+bindkey -M visual i up-line-or-history
+bindkey -M visual k down-line-or-history
+bindkey -M visual j vi-backward-char
 
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'i' up-line-or-history
@@ -132,10 +136,24 @@ bindkey -M vicmd J vi-backward-word
 bindkey -M vicmd L vi-forward-word-end
 
 bindkey -M vicmd a vi-insert
+bindkey -M vicmd A vi-insert-bol
 bindkey -M vicmd s vi-add-next
-bindkey -M vicmd A vi-beginning-of-line
-bindkey -M vicmd S vi-end-of-line
+bindkey -M vicmd S vi-add-eol
 
+bindkey -M vicmd q vi-beginning-of-line
+bindkey -M visual q vi-beginning-of-line
+bindkey -M vicmd p vi-end-of-line
+bindkey -M visual p vi-end-of-line
+
+bindkey -M vicmd w vi-find-next-char
+bindkey -M visual w vi-find-next-char
+bindkey -M vicmd z vi-find-next-char-skip
+bindkey -M visual z vi-find-next-char-skip
+
+bindkey -M vicmd W vi-find-prev-char
+bindkey -M visual W vi-find-prev-char
+bindkey -M vicmd Z vi-find-prev-char-skip
+bindkey -M visual Z vi-find-prev-char-skip
 
 # function zle-keymap-select {
 #     if  [[ ${KEYMAP} == vicmd ]] ||
