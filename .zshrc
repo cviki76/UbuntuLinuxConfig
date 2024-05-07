@@ -122,6 +122,10 @@ bindkey -M vicmd l vi-forward-char
 bindkey -M vicmd i up-line-or-history
 bindkey -M vicmd k down-line-or-history
 bindkey -M vicmd j vi-backward-char
+bindkey -M visual l vi-forward-char
+bindkey -M visual i up-line-or-history
+bindkey -M visual k down-line-or-history
+bindkey -M visual j vi-backward-char
 
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'i' up-line-or-history
