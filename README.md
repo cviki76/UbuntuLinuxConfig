@@ -84,6 +84,8 @@
    * `sudo apt-get install tmux`
 * Tmux Plugin Installation
    * `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+* Create a folder for tmux sessions(for tmux-ressurect)
+   * `mkdir ~/.config/tmux_sessions`
 * Reboot the PC
 * Select the GNOME terminal theme(Catppuccin Mocha) and the nerd font in the terminal `Preferences`**
 * Make a tmux session
