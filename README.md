@@ -62,9 +62,8 @@
     * `sudo apt-get update`
     * `sudo apt-get install neovim`
 
-* Download `live-server` and `pyright` (for lsp)
+* Download `live-server` (for markdown-preview)
     * `sudo npm install -g live-server`
-    * `sudo npm install -g pyright`
 
 # CLONING THE CONFIG
   ```bash
