@@ -24,8 +24,8 @@
   * `sudo ./VBoxLinuxAdditions.run`
 
 # Global install
-* `sudo apt upgrade`
 * `sudo apt update`
+* `sudo apt upgrade`
 * `sudo apt install git wget curl xclip gcc ripgrep pandoc npm python3-pip`
 
 # Git Config
