@@ -40,5 +40,7 @@ rm -rf ~/.config/temp
 
 # tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/scripts/install_plugins.sh
+sed -i -e 's/C-k/C-i/g' -e 's/C-j/C-k/g' -e 's/C-h/C-j/g' ~/.config/tmux/plugins/vim-tmux-navigator/vim-tmux-navigator.tmux
 mkdir ~/.config/tmux_sessions
-sudo reboot
+# sudo reboot
