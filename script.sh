@@ -30,6 +30,7 @@ sudo apt-get install neovim
 sudo npm install -g live-server
 
 mkdir ~/.config/temp
+chmod 777 ~/.config/temp
 git clone https://github.com/cviki76/linux-ubuntu-config ~/.config/temp
 rm -rf ~/.config/temp/.git
 rm -rf ~/.config/temp/README.md
@@ -40,7 +41,7 @@ rm -rf ~/.config/temp
 
 # tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-~/.tmux/plugins/tpm/scripts/install_plugins.sh
+~/.tmux/plugins/tpm/scripts/install_plugins.sh & wait $!
 sed -i -e 's/C-k/C-i/g' -e 's/C-j/C-k/g' -e 's/C-h/C-j/g' ~/.config/tmux/plugins/vim-tmux-navigator/vim-tmux-navigator.tmux
 mkdir ~/.config/tmux_sessions
 # sudo reboot
