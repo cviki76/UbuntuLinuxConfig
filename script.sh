@@ -30,11 +30,11 @@ sudo npm install -g live-server
 
 mkdir temp
 cd temp
-git clone https://github.com/cviki76/UbuntuLinuxConfig
+git clone https://github.com/cviki76/linux-ubuntu-config
 rm -rf .git
 rm -rf README.md
-mv UbuntuLinuxConfig/* ~/.config
-mv UbuntuLinuxConfig/.* ~
+mv linux-ubuntu-config/* ~/.config
+mv linux-ubuntu-config/.* ~
 cd ..
 rm -rf temp
 
