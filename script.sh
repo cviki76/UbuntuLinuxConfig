@@ -5,12 +5,10 @@ sudo apt upgrade
 sudo apt install git wget curl xclip gcc ripgrep pandoc npm python3-pip python3.10-venv zsh tmux
 
 # git
-echo "Username for github?"
-read username
+echo -n "Github username:" && read username
 git config --global user.name $username
 
-echo "Email for github?"
-read email
+echo -n "Github email:" && read email
 git config --global user.email $email
 
 # zsh
@@ -35,8 +33,8 @@ git clone https://github.com/cviki76/linux-ubuntu-config ~/.config/temp
 rm -rf ~/.config/temp/.git
 rm -rf ~/.config/temp/README.md
 rm -rf ~/.config/temp/script.sh
-mv ~/.config/temp/* ~/.config
-mv ~/.config/temp/.* ~
+mv -f ~/.config/temp/* ~/.config
+mv -f ~/.config/temp/.* ~
 rm -rf ~/.config/temp
 
 # tmux
