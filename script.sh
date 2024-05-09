@@ -34,8 +34,8 @@ git clone https://github.com/cviki76/linux-ubuntu-config ~/.config/temp
 rm -rf ~/.config/temp/.git
 rm -rf ~/.config/temp/README.md
 rm -rf ~/.config/temp/script.sh
-mv ~/.config/temp/linux-ubuntu-config/* ~/.config
-mv ~/.config/temp/linux-ubuntu-config/.* ~
+mv ~/.config/temp/* ~/.config
+mv ~/.config/temp/.* ~
 rm -rf ~/.config/temp
 
 # tmux

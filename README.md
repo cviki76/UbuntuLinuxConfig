@@ -67,15 +67,14 @@
 
 # CLONING THE CONFIG
   ```bash
-  mkdir temp
-  cd temp
-  git clone https://github.com/cviki76/linux-ubuntu-config
-  rm -rf .git
-  rm -rf README.md
-  mv linux-ubuntu-config/* ~/.config
-  mv linux-ubuntu-config/.* ~
-  cd ..
-  rm -rf temp
+    mkdir ~/.config/temp
+    git clone https://github.com/cviki76/linux-ubuntu-config ~/.config/temp
+    rm -rf ~/.config/temp/.git
+    rm -rf ~/.config/temp/README.md
+    rm -rf ~/.config/temp/script.sh
+    mv ~/.config/temp/linux-ubuntu-config/* ~/.config
+    mv ~/.config/temp/linux-ubuntu-config/.* ~
+    rm -rf ~/.config/temp
   ```
 # TMUX
 
@@ -98,6 +97,7 @@
         tmux bind-key -n C-i if-shell "$is_vim" "send-keys C-i" "select-pane -U"
         tmux bind-key -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
         ```
+
 # Setup using a script
-    * `sudo apt install curl`
-    * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/cviki76/linux-ubuntu-config/main/script.sh)"`
+* `sudo apt install curl`
+* `sh -c "$(curl -fsSL https://raw.githubusercontent.com/cviki76/linux-ubuntu-config/main/script.sh)"`
