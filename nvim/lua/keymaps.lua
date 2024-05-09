@@ -43,7 +43,7 @@ vim.keymap.set('v', 'p', '$h')
 vim.keymap.set({'n','v'}, 'P', 'G$')
 
 vim.keymap.set('i', 'jk', '<ESC>')
-vim.keymap.set('n', ';', ':')
+vim.keymap.set({'n', 'v'}, ';', ':')
 
 vim.keymap.set({'n','v'}, "I", "3k")
 vim.keymap.set({'n','v'}, "K", "3j")

@@ -155,6 +155,14 @@ bindkey -M visual W vi-find-prev-char
 bindkey -M vicmd Z vi-find-prev-char-skip
 bindkey -M visual Z vi-find-prev-char-skip
 
+bindkey -M vicmd r vi-yank
+bindkey -M visual r vi-yank
+
+bindkey -M vicmd R vi-yank-whole-line
+
+bindkey -M vicmd u vi-put-before
+bindkey -M visual u vi-put-before
+
 # function zle-keymap-select {
 #     if  [[ ${KEYMAP} == vicmd ]] ||
 #         [[ $1 = 'block' ]]; then
