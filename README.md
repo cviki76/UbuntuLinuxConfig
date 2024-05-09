@@ -99,5 +99,5 @@
         tmux bind-key -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
         ```
 # Setup using a script
-`sudo apt install curl`
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/cviki76/linux-ubuntu-config/main/script.sh)"`
+    * `sudo apt install curl`
+    * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/cviki76/linux-ubuntu-config/main/script.sh)"`
