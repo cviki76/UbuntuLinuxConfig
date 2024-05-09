@@ -100,4 +100,4 @@
 
 # Setup using a script
 * `sudo apt install curl`
-* `sh -c "$(curl -fsSL https://raw.githubusercontent.com/cviki76/linux-ubuntu-config/main/script.sh)"`
+* `sh -c "$(curl -fsSL https://raw.githubusercontent.com/cviki76/linux-ubuntu-config/main/config_init.sh)"`

@@ -160,8 +160,10 @@ bindkey -M visual r vi-yank
 
 bindkey -M vicmd R vi-yank-whole-line
 
-bindkey -M vicmd u vi-put-before
-bindkey -M visual u vi-put-before
+bindkey -M vicmd u vi-put-after
+bindkey -M visual u vi-put-after
+
+bindkey -M vicmd e vi-replace-chars
 
 # function zle-keymap-select {
 #     if  [[ ${KEYMAP} == vicmd ]] ||
