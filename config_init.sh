@@ -10,6 +10,8 @@ git config --global user.name $username
 echo -n "Github email: " && read email
 git config --global user.email $email
 
+git config --global credential.helper store
+
 # zsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" & wait $!
