@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt update
 sudo apt upgrade
-sudo apt install git wget curl xclip gcc ripgrep pandoc npm python3-pip python3.10-venv zsh tmux
+sudo apt install git wget curl xclip gcc ripgrep pandoc npm python3-pip python3-venv zsh tmux
 
 # git
 echo -n "Github username: " && read username
