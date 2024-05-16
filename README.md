@@ -27,6 +27,7 @@
 * `sudo apt update`
 * `sudo apt upgrade`
 * `sudo apt install git wget curl xclip gcc ripgrep pandoc npm python3-pip python3-venv`
+* `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash`
 
 # Git Config
 * `git config --global user.name "username"`
@@ -102,3 +103,4 @@
 # Setup using a script
 * `sudo apt install curl`
 * `sh -c "$(curl -fsSL https://raw.githubusercontent.com/cviki76/linux-ubuntu-config/main/config_init.sh)"`
+* `nvm install 20`
