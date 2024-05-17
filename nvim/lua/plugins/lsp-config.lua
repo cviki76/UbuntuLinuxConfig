@@ -10,7 +10,7 @@ return{
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "clangd", "basedpyright"}
+        ensure_installed = {"lua_ls", "clangd", "pyright"}
       })
     end
   }
@@ -33,8 +33,15 @@ return{
       lspconfig.clangd.setup({
         capabilites = capabilites
       })
-      lspconfig.basedpyright.setup({
-        capabilites = capabilites
+      lspconfig.pyright.setup({
+        capabilites = capabilites,
+        settings = {
+            python = {
+                analysis = {
+                    typeCheckingMode = "off",  -- Disable type checking and annotations
+                }
+            }
+        }
       })
 
       vim.keymap.set('n', '.', vim.lsp.buf.hover, {})
